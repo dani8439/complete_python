@@ -21,3 +21,20 @@ if x == 1:
 # Exercise 
 # Use the "print" function to print the line "Hello, world!"
 print("Hello, World!")
+
+# Variables and Types 
+# Pything is completely objeect oriented, and not "statically typed". You do not need to declare variables before using them, or declare their type. every variable in Python is an object.
+
+# Numbers 
+# Python supports two types of numbers - integers (whole numbers) and floating point numbers (decimals). It also supports complext numbers. To define an integer: 
+
+myint = 7;
+print(myint)
+
+# To define a floating point number, you may use one of the following notations: 
+myfloat = 7.0;
+print(myfloat)
+myfloat = float(7)
+print(myfloat)
+
+# Strings
