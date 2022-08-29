@@ -37,3 +37,5 @@ To run the script file from terminal run (in VS code - not the terminal):
 In Jupyter notebooks - ipynb stands for 'i python notebook'.
 
 Notebook system can also hold markdown text. If you want to make it into a normal markdown cell, select from the drowpdown markdown, and it will just have normal text in it. Will no longer have the `In []` in front of the cell. And if you press shift + enter, it displays as a normal text. 
+
+The special file name means you can't double click on the file and open it. Can double click on .py files, but can't on a .ipynb file. Get scrambled code, or other output. Can only open it through the Jupyter system.
