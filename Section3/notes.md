@@ -46,3 +46,13 @@ OR to have our operations happen first can use parentheses
 (2 + 10) * (10 + 3)
 # 156
 ```
+
+# Coding Exercise 1: Numbers: Simple Arithmetic 
+Write an expression that equals 100.
+For example `50+50` or `110-10`.
+See if you can use more than one arithmetic operator! Write only one expression and submit only one line of code: 
+
+```python
+(60/2) + (95-25)
+1000 / 10
+```
