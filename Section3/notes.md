@@ -56,3 +56,12 @@ See if you can use more than one arithmetic operator! Write only one expression 
 (60/2) + (95-25)
 1000 / 10
 ```
+
+# Numbers FAQ
+
+1. What's the difference between floating point and an integer?
+An integer has no decimals in it. A floating point number can display digits past the decimal point. 
+
+2. Why doesn't `0.1+0.2-0.3` equal 0.0? 
+This has to do with floating point accuracy and computer's abilities to represent numbers in memory. For a full breakdown check out: 
+[link python docs](https://docs.python.org/2/tutorial/floatingpoint.html) 
