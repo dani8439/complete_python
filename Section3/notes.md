@@ -8,3 +8,41 @@ Dictionaries - dic Unordered Key:Value pairs: {"mykey": "value", "name": "Franki
 Tuples - tup Ordered immutable sequence of objects: (10, "hello", 200.3)
 Sets - set Unordered collection of unique objects: {"a","b"}
 Booleans - bool Logical value indicating True or False
+
+# Python Numbers 
+There are two main number types we will work with:
+- `Integers` which are whole numbers
+- `Floating Point numbers` which are numbers with a decimal. 
+
+
+Basic: 
+```python
+2+1 
+2-1 
+2*2 
+3/2
+```
+
+Modulo or "Mod" Operator. Convenient to check if a number is divisible by another number.
+```python
+7/4 
+7%4 
+50%5 
+```
+
+Powers
+```python
+2**3 
+# 8
+```
+
+```python
+2 + 10 * 10 + 3
+# 105
+```
+
+OR to have our operations happen first can use parentheses 
+```python
+(2 + 10) * (10 + 3)
+# 156
+```
