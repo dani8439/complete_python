@@ -228,3 +228,62 @@ Use what you know about the print() function to print out the phrase "Hello Worl
 print("Hello World")
 
 ```
+
+# Indexing and Slicing with Strings
+
+```python
+mystring = "Hello World"
+mystring 
+# 'Hello World'
+
+mystring[0]
+# H
+
+mystring[8]
+# r
+
+mystring[9]
+# l 
+
+# OR reverse indexing 
+mystring[-2]
+# l
+
+# Slicing is a little more complicated as grabbing a subsection of a string 
+
+mystring = 'abcdefghijk' 
+
+# colon indicates starting at whatever index we want, it takes it until the end. 
+mystring[2:]
+# cdefghijk
+
+# Scenario where you want to grab from the beginning up to a specific index. Stop index (3) is saying go up to but not including that index position.
+mystring[:3]
+# abc
+
+mystring[3:6]
+# def 
+
+mystring[1:3]
+# bc
+
+mystring[6:9]
+# ghi
+
+# Step size
+# Imagine we wanted to grab everything from the beginning the string all the way to the end can just use:
+
+mystring[::]
+# abcdefghijk
+# [::] means from all the way to the beginning go all the way to the end. Techncially valid syntax. Reason why you might see this is because someone wanted to specify the third parameter, which is the step size. Go from the beginning to the end with a step size of 1. Default. (a-b, b-c, c-d... etc) But can specify and say go in steps of 2. a-c. c-e. e-g, g-i, i-k
+mystring[::2]
+# acegik
+# jumping in a step size of 2. 
+# can combine the step size with other 2, say: 
+mystring[2:7:2]
+# ceg
+
+# clever way to reverse strings. It is a trick. People get annoyed in interviews, because people use this instead of a for loop
+mystring[::-1]
+# kjihfedcba
+```
