@@ -145,3 +145,71 @@ Strings are sequences of characters using the syntax of either single quotes or 
 - 'hello' 
 - "Hello"
 - " I don't do that "
+
+- Strings are ordered sequences it means we can use indexing and slicing to grab sub-sections of the string. 
+- Indexing notations uses `[]` notation after the string (or variable assigned the string).
+- Indexing allows you to grab a single character from the string. 
+
+
+- These actions use `[]` square brackets and a number index to indicat positions of what you want to grab: 
+Character:      h   e   l   l   o
+index:          0   1   2   3   4
+reverse Index:  0   -4  -3  -2  -1
+
+- Slicing allows you to grab a subsection of multiple characters, a "slice" of the string.
+- This has the following syntax: 
+-- [start:stop:step]
+- **start** is a numerical index for the slice start.
+- **stop** is the index you will go up to (but not include)
+- **step** is the size of the "jump" you take.
+
+Let's explore these concepts!
+
+```python
+'hello' 
+
+"world" 
+
+'this is also a string'
+
+# causes an error because of the single quotes. 
+' I'm going on a run' 
+# Will produce an error want to wrap in double quotes 
+
+" I'm going on a run "
+
+# Printing out the string vs it being returned as we've done so far. Can use the print function to print out a string 
+print("hello")
+
+# This is important because we're no longer seeing the In [] Out[] just seeing the string itself. Important because if we want to run:
+
+"hello world one"
+"hellow rold two"
+# will only get back 
+'hello world two'
+
+# In order to see everything, have to print out the results. 
+print("hello world one")
+print("hellow rold two")
+# hello world one 
+# hello world two 
+
+print('hello world')
+# hello world 
+
+# escape character to print on new line. Python knows not to include the \n. 
+print('hello \n world')
+# hello 
+#  world 
+
+# Another popular escape character is \t for tab 
+print('hello \t world')
+# hello     world
+
+# len() function allows you to check the length of the string 
+len('hello')
+# 5
+
+len('I am')
+# 4
+```
