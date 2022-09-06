@@ -214,7 +214,7 @@ len('I am')
 # 4
 ```
 
-# Coding Exercise: Quick Pring Check 
+# Coding Exercise: Quick Print Check 
 
 Your Task:
 
