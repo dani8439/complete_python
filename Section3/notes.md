@@ -287,3 +287,19 @@ mystring[2:7:2]
 mystring[::-1]
 # kjihfedcba
 ```
+
+# Exercise: String Indexing 
+Write a string index that returns just the letter 'r'  from 'Hello World' .
+
+For example, 'Hello World'[0]  returns 'H' 
+
+You should only write one line of code for this. Do not assign a variable name to the string.
+
+```python
+# Write your string index below
+# Start with 'Hello World'
+# and make sure to match spaces and capitalization exactly
+
+'Hello World'[8]
+# r
+```
