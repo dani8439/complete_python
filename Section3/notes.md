@@ -65,3 +65,74 @@ An integer has no decimals in it. A floating point number can display digits pas
 2. Why doesn't `0.1+0.2-0.3` equal 0.0? 
 This has to do with floating point accuracy and computer's abilities to represent numbers in memory. For a full breakdown check out: 
 [link python docs](https://docs.python.org/2/tutorial/floatingpoint.html) 
+
+# Variable Assignments 
+Just saw how to work with numbers, but what do the numbers actually represent? 
+
+Would be nice to assign these data types to a variable name to easily reference them later on in our code. 
+
+For ex: 
+
+`my_dogs = 2`
+
+Rules for variable names
+- Can't start with a number
+- No spaces in the name, use an underscore (_) instead. 
+- Can't use any symbols: `:'",<>/?|\()!@#$%^&*~-+`. 
+- It's considered best practice that names are lowercase 
+- Avoid using words that have special meaning in Python like "list" and "str"
+
+Python uses *Dynamic Typing* means you can reassign variables to different data types. 
+This makes Python very flexible in assigning data types this is different than other languages that are "statically-Typed."
+
+```python
+my_dogs = 2
+
+my_dogs = ["Sammy", "Frankie"]
+```
+
+This is totally okay!
+
+Pros of Dynamic Typing:
+- Very easy to work with 
+- Faster development time
+
+Cons of Dynamic Typing:
+- May result in bugs for unexpected data types!
+- You need to be aware of `type()`
+
+```python
+a = 5 
+# 5
+
+# Can reassign
+a = 10
+# 10
+
+# Can add objects together
+a + a 
+# 20
+
+# Can do reassignments with a reference to the same object - take the current value and reassign it
+a = a + a 
+# 20 
+
+# Can keep doing it, and double each time...
+
+# Imagine we don't know what type a is, can use the type function 
+type(a) # then do shift enter and will get back
+# int
+
+a = 30.1 
+type(a)
+# Float
+
+# Want to avoid using built in keywords with python names 
+# int = 4 # gives you syntax highlighting, lets you know, you shouldn't do this. 
+# If you accidentally do run something like that when in Jupyter, restart the kernel. It will delete everything and start from scratch.
+
+# Simple example with variable names 
+my_income = 100 
+tax_rate = 0.1 
+my_taxes = my_income * tax_rate 
+```
