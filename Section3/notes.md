@@ -213,3 +213,18 @@ len('hello')
 len('I am')
 # 4
 ```
+
+# Coding Exercise: Quick Pring Check 
+
+Your Task:
+
+Use what you know about the print() function to print out the phrase "Hello World" . Make sure your capitalization and spacing match.
+
+```python
+# Lines that start with hashtags are comments
+# Write your code below that prints out "Hello World"
+# Make sure your spacing and capitalization matches.
+
+print("Hello World")
+
+```
