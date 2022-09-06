@@ -1,13 +1,13 @@
 # Introduction Python Data Types 
 
-Integers - int While numbers, such as: 3, 300, 200 
-Floating - point float Numbers with a decimal point:2.3, 4.6 100.00 
-Strings - str Ordered sequence of characters: "Hello", 'Sammy', "2000"
-Lists - list: Ordered sequence of Objects: [10, "hello", 200.3] 
-Dictionaries - dic Unordered Key:Value pairs: {"mykey": "value", "name": "Frankie"}
-Tuples - tup Ordered immutable sequence of objects: (10, "hello", 200.3)
-Sets - set Unordered collection of unique objects: {"a","b"}
-Booleans - bool Logical value indicating True or False
+- Integers - int While numbers, such as: 3, 300, 200 
+- Floating - point float Numbers with a decimal point:2.3, 4.6 100.00 
+- Strings - str Ordered sequence of characters: "Hello", 'Sammy', "2000"
+- Lists - list: Ordered sequence of Objects: [10, "hello", 200.3] 
+- Dictionaries - dic Unordered Key:Value pairs: {"mykey": "value", "name": "Frankie"}
+- Tuples - tup Ordered immutable sequence of objects: (10, "hello", 200.3)
+- Sets - set Unordered collection of unique objects: {"a","b"}
+- Booleans - bool Logical value indicating True or False
 
 # Python Numbers 
 There are two main number types we will work with:
@@ -135,4 +135,13 @@ type(a)
 my_income = 100 
 tax_rate = 0.1 
 my_taxes = my_income * tax_rate 
+my_taxes 
+# 10.0
 ```
+
+# Introduction to Strings
+Strings are sequences of characters using the syntax of either single quotes or double quotes: 
+
+- 'hello' 
+- "Hello"
+- " I don't do that "
