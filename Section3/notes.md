@@ -479,3 +479,23 @@ age = 3
 print(f'{name} is {age} years old.')
 # Sam is 3 years old
 ```
+
+# Print Formatting FAQ's 
+
+1.) I imported print from the _future_module, now print isn't working. What happened? 
+
+This is because once you import from the _future_ module in Python 2.7, a print statement will no longer work, and print must then use a print() function. Meaning that you should use 
+
+`print('Whatever you were going to print')` 
+
+or if you are using some formatting:
+
+`print('This is a string with an {p}'.format(p="insert"))
+
+The _future_ module allows you to use Python3 functionality in a Python2 environment, but some functionality is overwritten (such as the print statement, or classic division when you import division).
+
+Since we are using Jupyter Notebooks, once you do the import, all cells will require the use of the print() function. You will have to restart Python or start a new notebook to regain the old functionality back. 
+
+Here is an awesome source for print formatting: 
+
+[https://pyformat.info/](https://pyformat.info/)
