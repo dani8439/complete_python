@@ -383,3 +383,13 @@ x.split('i')
 # ['H', ' th', 's ', 's a str', 'ng']
 # Removed all the i's because it's splitting on them. Now the white space is included. 
 ```
+
+# Strings FAQ 
+
+1. **Are strings mutable?** 
+
+Strings are not mutable! (Meaning you can't use indexing to change individual elements of a string)
+
+2. **How do I create comments in my code?**
+
+You can use the hashtag `#` to create comments in your code.
