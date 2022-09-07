@@ -393,3 +393,11 @@ Strings are not mutable! (Meaning you can't use indexing to change individual el
 2. **How do I create comments in my code?**
 
 You can use the hashtag `#` to create comments in your code.
+
+# Strings Quiz
+
+1. Strings are immutable - true
+
+2. if s='hello' what is the output of s[1] - 'e'
+
+3. If s='Sammy' what is the output of s[2:]? 'mmy'
