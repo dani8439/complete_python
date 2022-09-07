@@ -317,3 +317,69 @@ You should only write one line of code for this. Do not assign a variable name t
 'tinker'[1:4]
 # ink
 ```
+
+# String Properties and Methods
+
+Immutability of strings. Stems from Mutate. Cannot mutate, cannot change 
+
+```python
+name = "Sam"
+
+# Can't do this. Will get an error, because strings are immutable. Can't grab one of the characters and then try to reassign it. Strings don't work that way in Python. Doesn't support item assignment. 
+name[0] = 'P'
+
+# If we want to reassign the S to a P, can do that with concatenation. Merging 2 strings together. 
+
+last_letters = name[1:]
+# 'am' 
+
+# String concatenation 
+'P' + last_letters 
+# Pam 
+
+x = "Hello World" 
+x = x + " it is beautiful outside!
+# Hello World it is beautiful outside! 
+
+x 
+# Hello World it is beautiful outside! 
+
+# If we accidentally ran it again, then it would be 
+# Hello World it is beautiful outside! it is beatiful outside! 
+
+# Also multiplication you can do, to do multiple string concatenations at once 
+letter = 'z' 
+letter * 10 
+# 'zzzzzzzzzz'
+
+# When performing string concat. or string multiplication, will get errors when try to concat a number wtih a string: 
+
+2 + 3 
+# 5 
+
+# Callback to dynamic typing, concats it, doesn't add it. Prime example of good and bad of Python's ability to be very flexible. Not getting an error, but maybe being too flexible as expected 5 and not 23. 
+'2' + '3' 
+# 23 
+
+# Objects in Python usually have built in methods. These methods are essentially functions that are inside the object. 
+x = 'Hello World'
+# if you hit x. and then TAB in jupyter notebooks, a list will pop out of all the built in methods available on the object. Tons of methods. 
+
+# uppercases everything in the string. Doesn't effect the original string. If you want it to, have to reassign it. say x = x.upper()
+x.upper()
+# HELLO WORLD
+
+x.lower()
+#hello world 
+
+# quickly create a list off of a string
+x.split()
+# ['Hello', 'World']
+
+# will split based on the whitespace, or on the letter that you pass in. 
+x = 'Hi this is a string'
+
+x.split('i')
+# ['H', ' th', 's ', 's a str', 'ng']
+# Removed all the i's because it's splitting on them. Now the white space is included. 
+```
