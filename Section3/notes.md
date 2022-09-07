@@ -401,3 +401,81 @@ You can use the hashtag `#` to create comments in your code.
 2. if s='hello' what is the output of s[1] - 'e'
 
 3. If s='Sammy' what is the output of s[2:]? 'mmy'
+
+# Print Formatting with Strings 
+- Often you will want to "inject" a variable into your string for printing.
+
+For ex:
+
+`my_name = 'Jose'` 
+`print("Hello " + my_name)`
+
+- There are multiple ways to format strings for printing variables in them.
+- This is known as string interpolation. (fancy a way of saying stick a variable into a string)
+- Let's explore two methods for this:
+`.format()` method
+`f-strings` (formatted string literals)
+
+```python
+# .format() method
+# 'String here {} then also {}'.format('something1', 'something2')
+print('This is a string {}'.format('INSERTED'))
+# This is a string INSERTED
+
+# Inserts where it sees the curly braces
+
+# Can also insert by index position 
+print('The {} {} {}'.format('fox', 'brown', 'quick'))
+# THe fox brown quick
+# .format is going to insert these strings in the same order you supply them and into these curly braces. 
+
+# Can based off the index position, supply the numbers in the order we want. So to do The quick brown fox would be: 
+print('The {2} {1} {0}'.format('fox', 'brown', 'quick'))
+# The quick brown fox
+
+# Can also repeat and do the fox fox fox, by print('The {0} {0} {0}'.format('fox', 'brown', 'quick'))
+
+# Can also assign keywords and only call keywords 
+print('The {q} {b} {f}'.format(f='fox', b='brown', q='quick'))
+# The quick brown fox
+
+# Float formatting follows "{value:width.precision f}"
+# Allows you to adjust the width and precision of your floating point number 
+result = 100/777
+result 
+# 0.1287001287001287
+
+print("The result was {}".format(result))
+# The result was 0.1287001287001287
+
+print("The result was {r}".format(r=result))
+# The result was 0.1287001287001287
+
+# "{value:width.precision f}"
+print("The result was {r:1.3f}".format(result))
+# The result was 0.1287001287001287
+# The result was 0.129
+
+# If you play around with the number and make it really large, say 10 instead of 1, it adds a lot of whitespace so it reads as The result was       0.129, because the width specifies how wide you want the entire string number to be. Not terribly useful. Often just playing around with the precision number. 
+
+result = 104.12345
+print("The result was {r:1.5f}".format(result))
+# The result was 104.12345
+
+# F strings - Formatted String Literals. Still very new. Offer several benefits over older .format() method. Allows you to skip the step of .format and write result directly inside the string: 
+
+name = "Jose" 
+print('Hello, his name is {}'.format(name))
+# Hello, his name is Jose
+
+# BECOMES WITH THE NEW METHOD: 
+print(f'Hello, his name is {name}')
+# Hello, his name is Jose
+
+# This works with mutliple variables. 
+name = "Same"
+age = 3
+
+print(f'{name} is {age} years old.')
+# Sam is 3 years old
+```
