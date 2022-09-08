@@ -622,3 +622,9 @@ The answer should just be one list on a single line. Don't assign a variable nam
 ```python
 new_list = [1, 'falafel', 301.3]
 ```
+
+# Lists - FAQ 
+
+1. How do I index a nested list? For example if I want to grab 2 from [1, 1, [1, 2]]? 
+
+You would just add another set of brackets for indexing the nested list, for example: `my_list[2][1]`. We'll discover later on more nested objects. 
