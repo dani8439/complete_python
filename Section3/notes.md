@@ -606,3 +606,19 @@ num_list.reverse()
 num_list
 # [8, 4, 3, 1]
 ```
+
+# Coding Exercise: Lists 
+Lists
+Create a list that contains at least one string, one integer and one float.
+
+For example:
+
+[1, 'two', 3.14159] 
+
+Note that the order and number of items doesn't matter. 
+
+The answer should just be one list on a single line. Don't assign a variable name to the list.
+
+```python
+new_list = [1, 'falafel', 301.3]
+```
