@@ -516,3 +516,45 @@ NOTE: At this time, f-strings won't work! Udemy Coding Exercises use Python 3.5.
 print('Python {}'.format('rules!')
 # Python rules!
 ```
+
+# Lists in Python
+- Lists are ordered sequences that can hold a variety of object types. 
+- They use brackets [] and commas to separate objects in the list 
+-- `[1,2,3,4,5]
+- Lists support indexing and slicing. Lists can be nested and also have a variety of useful methods that can be called off of them. 
+
+```python
+my_list = [1,2,3]
+# flexible, can be different data types
+my_list = ['String', 100, 23.2]
+
+# check lenght of a list
+len(my_list)
+# 3
+
+# Just like a string, because a list is an ordered list of elements, can use indexing and slicing 
+mylist = ["one", "two", "three"]
+
+mylist[0]
+# 'one' 
+
+mylist[1:]
+# ['two', 'three']
+
+# Can concatenate lists together 
+another_list =['four', 'five']
+
+new_list = mylist + another_list
+# ["one", "two", "three", "four", "five"]
+
+# Can mutate or change around the list. Can't do that in a string. 
+new_list[0] = 'ONE ALL CAPS'
+
+new_list
+# ['ONE ALL CAPS', 'two', 'three', 'four', 'five']
+
+# Add an element to the end of a list, use append() method
+new_list.append('six')
+# ['ONE ALL CAPS', 'two', 'three', 'four', 'five', 'six']
+
+```
