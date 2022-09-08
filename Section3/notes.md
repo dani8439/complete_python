@@ -557,4 +557,52 @@ new_list
 new_list.append('six')
 # ['ONE ALL CAPS', 'two', 'three', 'four', 'five', 'six']
 
+new_list.append('seven')
+# ['ONE ALL CAPS', 'two', 'three', 'four', 'five', 'six', 'seven']
+
+# How to remove things off of lists. Can use the .pop() method. Will pop off an item from the end of a list 
+new_list.pop()
+# 'seven'
+
+new_list
+# ['ONE ALL CAPS', 'two', 'three', 'four', 'five', 'six']
+
+popped_item = new_list.pop()
+popped_item
+# 'six'
+
+new_list
+# ['ONE ALL CAPS', 'two', 'three', 'four', 'five']
+
+# How do I remove at a specific index? Not just the end of the list. Can pass an index position into the pop! By default the index position is -1 on .pop().
+new_list.pop(0)
+# 'ONE ALL CAPS'
+
+new_list
+# ['two', 'three', 'four', 'five']]
+
+# Sort method
+new_list = ['a', 'e', 'x', 'b', 'c']
+num_list = [4,1,8,2]
+
+new_list.sort()
+
+new_list
+# ['a', 'b', 'c', 'e', 'x']
+
+# doesn't actually return anything, but sorts the new_list in place. When you call it again, it's now sorted in alphabetical order. It's an important distinction to make, because beginners will do something like this: my_sorted_list = new_list.sort(). But because you sort in place, it doesn't actually return anything to assign to assign. So if you call my_sorted_list, it will get back nothing or none. Can check the type of it: type(my_sorted_list) and it will say NoneType. NoneType is the type for a none object. There is a special object called None. Something used to indicate no value. It's the return value of a function or a method that doesn't actually return anything. Also a common placeholder. Instead if you wanted to reassign would have to do it like so: 
+
+new_list.sort()
+my_sorted_list = new_list 
+my_sorted_list
+# ['a', 'b', 'c', 'e', 'x']
+
+num_list.sort()
+num_list
+# [1, 3, 4, 8]
+
+# Reverse method will reverse everything. Also in place so doesn't return anything, so have to call again to see it 
+num_list.reverse()
+num_list
+# [8, 4, 3, 1]
 ```
