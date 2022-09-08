@@ -628,3 +628,13 @@ new_list = [1, 'falafel', 301.3]
 1. How do I index a nested list? For example if I want to grab 2 from [1, 1, [1, 2]]? 
 
 You would just add another set of brackets for indexing the nested list, for example: `my_list[2][1]`. We'll discover later on more nested objects. 
+
+# Lists Quiz
+Question 1:
+If lst=[0,1,2] what is the result of lst.pop() - 2
+
+Question 2:
+Lists can have multiple object types. - True
+
+Question 3:
+If lst=['a','b','c'] What is the result of lst[1:]? ['b', 'c']
