@@ -735,3 +735,10 @@ test_dictionary = {'one': 1, 'two': 2, 'three': 3, 'four': 4}
 
 1. Do dictionaries keep an order? How do I print the values of the dictionary in order? 
 Dictionaries are mappings and do not retain order! If you do want the capabilities of a dictionary but you would like ordering as well check out the ordereddict object lecture later on in the course.
+
+# Quiz
+1. Is this statement True or False? Dictionaries retain order and are a sequence. False
+
+2. Given d={'k1':[1,2,3]}, what is the output of d['k1'][1]? 2.
+
+3. Is this statement True or False? Dictionaries are immutable. False
