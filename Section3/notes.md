@@ -809,3 +809,33 @@ t[0] = 'NEW'
 2. Tuples are Immutable. True
 
 3. Which of the following is a tuple? (1,2,[1,2])
+
+# Sets in Python
+
+**Sets** are unordered collections of **unique** elements. 
+
+Meaning there can only be one representative of the same object.
+
+```python
+myset = set()
+myset
+# set()
+
+myset.add(1)
+myset
+# Looks like a dictionary because of the curly braces, but it's not, because no key/value pairs 
+# {1}
+
+myset.add(2)
+myset
+# {1, 2}
+
+myset.add(2)
+# nothing. Will not add a value that isn't unique. 
+
+# May not be useful to add in this order. May be more useful to make a list, then cast to a set for the unique values:
+mylist = [1,1,1,1,1,1,1,2,2,2,2,2,3,3,3,3]
+# cast to a set....
+set(mylist)
+# {1, 2, 3}
+```
