@@ -723,5 +723,15 @@ d.values()
 d.items()
 # dict_items([('k1', 100), ('k2', 200), ('k3', 300)])
 # the items are in parentheses and that means that they are a tuple. 
-
 ```
+
+# Coding Exercise: Dictionaries 
+
+```python
+test_dictionary = {'one': 1, 'two': 2, 'three': 3, 'four': 4}
+```
+
+# Dictionaries - FAQ 
+
+1. Do dictionaries keep an order? How do I print the values of the dictionary in order? 
+Dictionaries are mappings and do not retain order! If you do want the capabilities of a dictionary but you would like ordering as well check out the ordereddict object lecture later on in the course.
