@@ -839,3 +839,20 @@ mylist = [1,1,1,1,1,1,1,2,2,2,2,2,3,3,3,3]
 set(mylist)
 # {1, 2, 3}
 ```
+
+# Coding Exercise: Sets 
+Write an expression that would turn the string 'Mississippi'  into a set of unique letters.
+
+For example:
+
+set('Parallel') 
+
+would return the set {'P', 'a', 'e', 'l', 'r'}
+
+You should only write one line of code for this. Do not assign a variable name to the set.
+
+```python
+set('Mississippi')
+
+# {M,i,s,p}
+```
