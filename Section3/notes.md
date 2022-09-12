@@ -884,3 +884,11 @@ type(False)
 b = None
 b # None data type doesn't return anything. 
 ```
+
+# Sets and Booleans Quiz
+
+1. {1,2,3,4} is an example of a Set. True
+
+2. How do you add an element to a set? .add()
+
+3. What is the result of: set([1,1,2,3])? {1, 2, 3}
