@@ -742,3 +742,62 @@ Dictionaries are mappings and do not retain order! If you do want the capabiliti
 2. Given d={'k1':[1,2,3]}, what is the output of d['k1'][1]? 2.
 
 3. Is this statement True or False? Dictionaries are immutable. False
+
+# Tuples in Python
+
+**Tuples** are very similar to lists. However they have one key difference - **immutability**. 
+
+Once an element is inside a tuple, it cannot be reassigned. 
+
+Tuples use parenthesis: `(1,2,3)`
+
+```python
+t = (1,2,3)
+# lists are always between square brackets 
+mylist = [1,2,3]
+
+# can confirm it's a tuple by using type()
+type(t)
+# tuple
+
+type(mylist)
+# list
+
+# check the length 
+len(t)
+# 3
+
+# Also fine to mix object types 
+t = ('one', 2)
+
+# can use slicing and indexing like with a list
+t[0]
+# 'one'
+
+t[-1]
+# 2
+
+# 2 basic built in methods for tuples, index, and the count methods. 
+t = ('a', 'a', 'b')
+# count will count however many occurences of what you pass in
+t.count('a')
+# 2 
+
+# index will pass the first occurence of what you pass in. 
+t.index('a')
+# 0
+
+t.index('b')
+# 2
+
+# Immutability what makes a tuple a tuple and different from a list
+
+mylist[0] = 'NEW'
+mylist
+# ['NEW', 2, 3]
+
+t[0] = 'NEW'
+# TypeError: 'tuple' object does not support item assignment
+
+# Use tuples for when passing around objects in your program and what to maintain data integrity - don't want the object to change. 
+```
