@@ -801,3 +801,11 @@ t[0] = 'NEW'
 
 # Use tuples for when passing around objects in your program and what to maintain data integrity - don't want the object to change. 
 ```
+
+# Quiz: Tuples in Python 
+
+1. Tuples have a lot of methods associated with them. False
+
+2. Tuples are Immutable. True
+
+3. Which of the following is a tuple? (1,2,[1,2])
