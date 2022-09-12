@@ -638,3 +638,90 @@ Lists can have multiple object types. - True
 
 Question 3:
 If lst=['a','b','c'] What is the result of lst[1:]? ['b', 'c']
+
+# Dictionaries in Python 
+
+- Dictionaries are unordered mappings for storing objects. Previously we saw how lists store objects in an ordered sequence, dictionaries use a key-value pairing instead. 
+- The key-value pair allows users to quickly grab objects without needing to know an index location.
+- Dictionaries use curly braces and colons to signify the keys and their associated values.
+
+`{'key1': 'value1', 'key2': 'value2'}`
+- So when to choose a list and when to choose a dictionary? 
+
+**Dictionaries** Have objects retrieved by key name. They're unordered and cannot be sorted. A good time to retrieve data from a dictionary would be when you need a value without needing to know it's exact index location. Comes with the con of not being able to sort the dictionary. It'll insert new pairs wherever it deems efficiently. 
+
+**Lists** Objects retrieved by location. Ordered Sequence can be indexed or sliced. 
+
+```python
+# construct a dictionary
+my_dict = {'key1': 'value1', 'key2': 'value2'}
+
+my_dict
+# {'key1': 'value1', 'key2': 'value2'}
+
+# to get a value back, instead of using index locations, still use square brackets but use the key associated with that value
+my_dict['key1']
+# 'value1'
+
+# Good example of use of dictionaries is prices in a store. 
+prices_lookup = {'apple': 2.99, 'oranges': 1.99, 'milk': 5.80}
+
+prices_lookup['apple']
+# 2.99
+
+# Important to note dictionaries are super flexible in the types of data they can hold. Can hold lists, and other dictionaries as well as numbers and strings 
+d = {'k1': 123, 'k2': [0,1,2], 'k3': {'insideKey': 100}}
+
+d['k2']
+# [0,1,2]
+
+d['k3']
+#{'insideKey': 100}
+# stacking index calls or key calls
+d['k3']['insideKey']
+# 100
+
+d['k2'][2]
+# 2
+
+d = {'key1': ['a', 'b', 'c']}
+# say we want to get C but make it uppercase. 
+mylist = d['key1']
+# ['a', 'b', 'c']
+letter = mylist[2]
+letter
+# 'c'
+letter.upper()
+# 'C'
+
+# Could also do this all in one step 
+d['key1'][2].upper()
+# 'C'
+
+# if we ever want to add new key/value pairs to a dictionary it's pretty straightforward 
+d = {'k1': 100, 'k2': 200}
+d['k3'] = 300 
+
+d
+# {'k1': 100, 'k2': 200, 'k3': 300}
+
+# Can easily use the same method to overwrite an existing pair 
+d['k1'] = 'NEW VALUE'
+d
+# {'k1': 'NEW VALUE', 'k2': 200, 'k3': 300}
+
+# a few useful dictionary methods. 
+# If we want to see all the keys in a dictionary can do .keys()
+d.keys()
+# dict_keys(['k1', 'k2', 'k3'])
+
+# If want the opposite and want the values, can call .values()
+d.values()
+# dict_values([100, 200, 300])
+
+# pairings together .items()
+d.items()
+# dict_items([('k1', 100), ('k2', 200), ('k3', 300)])
+# the items are in parentheses and that means that they are a tuple. 
+
+```
