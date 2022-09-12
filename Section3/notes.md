@@ -856,3 +856,31 @@ set('Mississippi')
 
 # {M,i,s,p}
 ```
+
+# Booleans in Python
+**Booleans** are operators that allow you to convey **True** or **False** statements.
+
+These are very important later on when we deal with control flow and logic! 
+
+```python
+# Have to capitalize it for it to work in Python 
+True
+# True 
+
+False
+# False 
+
+type(False)
+# bool - for booleans
+
+# Comparison Operators 
+1 > 2
+# False
+
+1 == 1 
+# True
+
+# Can use the None keyword as a placeholder for an object we don't want to assign yet. 
+b = None
+b # None data type doesn't return anything. 
+```
