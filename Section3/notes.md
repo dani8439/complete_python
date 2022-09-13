@@ -892,3 +892,125 @@ b # None data type doesn't return anything.
 2. How do you add an element to a set? .add()
 
 3. What is the result of: set([1,1,2,3])? {1, 2, 3}
+
+# I/O with Basic Files in Python 
+
+.txt files. 
+
+Already a test.txt file in the jupyter notebook notes. Can use jupyter's magic functionality to quickly write a text file:
+
+```python
+%%writefile myfile.txt
+Hello this is a text file
+this is the second line 
+this is the third line
+
+myfile = open('myfile.txt')
+myfile = open('whoops_wrong.txt')
+# FileNotFoundError Errno 2
+
+pwd 
+# Will print your current directory where the notebook is working from.
+
+myfile = open('myfile.txt')
+myfile.read()
+# 'Hello this is a text file\nthis is the second line\nthis is the third line'
+
+# if you try to read it again, get back an empty string. 
+myfile.read()
+# ''
+# Because the cursor is at the end of the file. Need to set it back to the beginning so it'll read it from the beginning again.
+
+# set the cursor back to the beginning
+myfile.seek(0)
+# Then you can read it again.
+
+myfile.readlines()
+# returns a list
+# ['Hello this is a text file\n',
+#'this is the second line\n',
+#'this is the third line']
+```
+
+## File Locations
+If you want to open files at another location on your computer, simply pass in the entire file path. 
+
+For Windows you need to use double \ so python doesn't treat the second \ as an escape character, a file path is in the form:
+
+`myfile = open("C:\\Users\\UserName\\Folder\\test.txt")`
+
+For MacOS and Linux you use slashes in the opposite direction:
+
+`myfile = open("/Users/UserName/Folder/myfile.txt")`
+
+Best Practices, should call close the file once open. 
+
+```Python
+myfile.close()
+
+myfile.open('myfile.txt')
+
+# Instead we can do this 
+
+# New Way, no longer have to worry about closing the file
+with open('myfile.txt') as my_new_file:
+    contents = my_new_file.read()
+
+contents 
+# 'Hello this is a text file\nthis is the second line\nthis is the third line'
+
+# Can also write to files and overwrite files 
+
+with open('myfile.txt', more='r') as myfile: 
+    contents = myfile.read() # shift tab will get useful info with the cursor next to the function. 
+contents 
+# 'Hello this is a text file\nthis is the second line\nthis is the third line'
+
+with open('myfile.txt', more='w') as myfile: 
+    contents = myfile.read()
+# Unsupported operation: not readable
+
+# a to append
+with open('myfile.txt', more='a') as myfile: 
+    contents = myfile.read()
+
+```
+## Reading, writing and Appending Modes
+
+- mode='r' is read only 
+- mode='w' is write only (will overwrite files or create new!)
+- mode='a' is append only (will add on to files)
+- mode='r+' is reading and writing 
+- mode='w+' is writing and reading (Overwrites exisisting files or creates a new file!)
+
+```python
+%%writefile my_new_file.txt
+ONE ON FIRST 
+TWO ON SECOND
+THREE ON THIRD
+# Overwriting my_new_file.txt
+
+with open('my_new_file.txt', mode='r') as f:
+    print(f.read)
+# ONE ON FIRST 
+# TWO ON SECOND
+# THREE ON THIRD
+
+with open('my_new_file.txt', mode='a') as f:
+    f.write('\nFOUR ON FOURTH')
+
+with open('my_new_file.txt', mode='r') as f:
+    print(f.read)
+# ONE ON FIRST 
+# TWO ON SECOND
+# THREE ON THIRD
+# FOUR ON FOURTH
+
+with open('dhdhdhdhdhd.txt', mode='w') as f: 
+    f.write('I CREATED THIS FILE!')
+# No Error. Since we opened with Mode w, Python went and created a text file for us. 
+
+with open('dhdhdhdhdhd.txt', mode='r') as f:
+    print(f.read())
+# I CREATED THIS FILE!
+```
