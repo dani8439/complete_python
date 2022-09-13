@@ -1055,3 +1055,5 @@ https://www.reddit.com/r/dailyprogrammer
 A very tricky website with very few hints and touch problems (Not for beginners but still interesting)
 
 http://www.pythonchallenge.com/
+
+# Python Objects and Data Structures Test Assessment Overview
