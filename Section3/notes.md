@@ -1014,3 +1014,21 @@ with open('dhdhdhdhdhd.txt', mode='r') as f:
     print(f.read())
 # I CREATED THIS FILE!
 ```
+
+# Coding Exercise: File I/O 
+File I/O
+This exercise will require several lines of code.
+
+Write a script that opens a file named 'test.txt' , writes 'Hello World'  to the file, then closes it.
+
+For example, the following code opens a file called 'myfile.txt' , writes 'This is my file' , and closes it:
+
+x = open('myfile.txt', 'w')
+x.write('This is my file')
+x.close()
+
+```python
+x = open('test.txt', 'w')
+x.write('Hello World')
+x.close()
+```
