@@ -57,3 +57,47 @@
 4 <= 1 
 # False 
 ```
+
+# Chaining Comparison Operators with Logical Operators 
+
+- We can use logical operators to combine comparison 
+-- **and** 
+-- **or**
+-- **not**
+
+```python
+1 < 2
+
+2 < 3 
+
+# Could use it this way. 
+1 < 2 < 3 
+# True 
+
+# Or use the and keyword. Says, is what's on my left true and is what's on my right true 
+1 < 2 and 2 < 3 
+# True 
+
+'h' == 'h' and 2 == 2
+# True 
+
+# Can use parentheses or not around the expressions. ('h' == 'h') and (2 == 2). All up to personal preference
+
+# or keyword needs one to be true 
+1 == 1 or 2 == 2
+# True 
+
+100 == 1 or 2 == 2
+# True 
+
+# not keyword asks to return the opposite boolean of what we just did 
+1 == 1
+# True 
+not(1 == 1)
+# False technically don't need the parentheses. But makes it more readable. 
+
+not 400 > 5000
+# True
+
+# not is sometimes useful when writing out logic, more obvious when doing control flow. Sometimes bits and pieces of code become more readable with the not keyword instead of the bang operator 1=
+```
