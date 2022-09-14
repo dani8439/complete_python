@@ -101,3 +101,34 @@ not 400 > 5000
 
 # not is sometimes useful when writing out logic, more obvious when doing control flow. Sometimes bits and pieces of code become more readable with the not keyword instead of the bang operator 1=
 ```
+
+# Comparison Operators Quiz
+1. What Boolean will be the output of the following 2 < 4 - True 
+
+2. What Boolean will be the output of the following:
+
+a = 12
+
+b = a-10
+
+a > b 
+
+True 
+
+3. What Boolean will be the output of the following:
+
+12 != 12
+
+False 
+
+4. What Boolean will be the output of the following:
+
+2 < 3 > 10
+
+False
+
+5. What Boolean will be the output of the following:
+
+2 <= 3 >= 1
+
+True 
