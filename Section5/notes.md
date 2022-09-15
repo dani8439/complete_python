@@ -13,18 +13,18 @@
 - This indentation system is crucial to Python and is what sets it apart from other programming languages. 
 
 - Syntax of an **if** statement:
-    **if** *some_condition:*
-        # execute some code
-    **else**:
-        # do something else
+    - **if** *some_condition:*
+        - # execute some code
+    - **else**:
+        - # do something else
 
 - Syntax of an **if/else** statement:
-    **if** *some_condition:*
-        # execute some code
-    **elif** *some_other_condition:*
-        # so something different
-    **else**:
-        # do something else
+    - **if** *some_condition:*
+        - # execute some code
+    - **elif** *some_other_condition:*
+        - # so something different
+    - **else**:
+        - # do something else
 
 ```python
 if True:   
@@ -86,12 +86,12 @@ The term **iterable** means you can "iterate" over the object.
 For example you can iterate over every character in a string, iterate over every item in a list, iterate over every key in a dictionary. 
 
 - Syntax of a for loop
-    my_iterable = [1,2,3]
-    for item_name in my_iterable:
-        print(item_name)
->> 1 
->> 2
->> 3
+    - *my_iterable* = [1,2,3]
+    - for item_name in my_iterable:
+        - print(item_name)
+ 1 
+ 2
+ 3
 
 
 ```python
@@ -277,3 +277,15 @@ for value in d.values():
 
 # dictionaries are technically unordered. Looks like everything is in order, but if you have a very large dictionary, no guarantee it'll be sorted or in any order you recognize. 
 ```
+
+# While Loops in Python
+
+While loops will continue to execute a block of code **while** some condition remains True.
+
+For example, while my pool is not full, keep filling my pool with water.
+
+Or while my dogs are still hungry, keep feeding my dogs. 
+
+- Syntax of a while loop
+    - *while some_boolean_condition:*
+        - # do something
