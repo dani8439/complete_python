@@ -310,7 +310,7 @@ while x < 5:
 # The current value of x is 3
 # The current value of x is 4
 
-# If you accidentally get an infinite while loop. In the jupyter notebook you get a star that indicates the cell is currently running. Can go to kernel and hit interrupte or restart. 
+# If you accidentally get an infinite while loop. In the jupyter notebook you get a star that indicates the cell is currently running. Can go to kernel and hit interrupte or restart. Can also do Ctrl+C
 
 while x < 5: 
     print(f'The current value of x is {x}')
