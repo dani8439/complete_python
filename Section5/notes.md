@@ -14,17 +14,17 @@
 
 - Syntax of an **if** statement:
     - **if** *some_condition:*
-        - # execute some code
+        - execute some code
     - **else**:
-        - # do something else
+        - do something else
 
 - Syntax of an **if/else** statement:
     - **if** *some_condition:*
-        - # execute some code
+        - execute some code
     - **elif** *some_other_condition:*
-        - # so something different
+        - do something different
     - **else**:
-        - # do something else
+        - do something else
 
 ```python
 if True:   
