@@ -288,4 +288,98 @@ Or while my dogs are still hungry, keep feeding my dogs.
 
 - Syntax of a while loop
     - *while some_boolean_condition:*
-        - # do something
+        - do something
+
+- You can combine with an else if you want 
+    - *while some_boolean_condition:*
+        - do something
+    - *else:* 
+        - do something different 
+
+```python
+x = 0 
+
+while x < 5: 
+    print(f'The current value of x is {x}')
+    x = x + 1
+    # x += 1 -- the same thing as line above
+
+# The current value of x is 0
+# The current value of x is 1
+# The current value of x is 2
+# The current value of x is 3
+# The current value of x is 4
+
+# If you accidentally get an infinite while loop. In the jupyter notebook you get a star that indicates the cell is currently running. Can go to kernel and hit interrupte or restart. 
+
+while x < 5: 
+    print(f'The current value of x is {x}')
+
+    x += 1
+    else:
+        print("X IS NOT LESS THAN 5")
+
+# The current value of x is 0
+# The current value of x is 1
+# The current value of x is 2
+# The current value of x is 3
+# The current value of x is 4
+# X IS NOT LESS THAN 5
+```
+
+**break, continue, pass** keywords.
+We can use break, continue, and pass statements in our loops to add additional functionality for various cases. The three statements are defined by:
+
+*break: Breaks out of the current closest enclosing loop.* 
+*continue: Goes to the top of the closest enclosing loop.* 
+*pass: Does nothing at all.* 
+
+```python
+x = [1,2,3]
+
+for item in x:
+    # comment
+
+# Get a syntax error
+# SyntaxError: unexpected EOF while parsing 
+# Means that because it uses indentation and white space, it expects you to have something beyond a comment. So often can have the pass keyword which means, do nothing at all. Developers will often put it in as a placeholder so that there's no errors. 
+
+for item in x:
+    # comment
+    pass
+
+print('end of my script')
+# end of my script
+
+mystring = 'Sammy'
+
+for letter in mystring:
+    if letter == 'a':
+        continue
+    print(letter)
+# S 
+# m
+# m
+# y
+
+# continue tells the program to go back to the top of the closest enclosing loop. So skip that specific condition, in this case the letter a. 
+
+for letter in mystring:
+    if letter == 'a':
+        break
+    print(letter)
+# S 
+# just breaks the loop and stops the loop if condition is met. 
+
+x = 0
+
+while x < 5:
+
+    if x == 2:
+        break
+    print(x)
+    x +=1 
+
+# 0
+# 1
+```
