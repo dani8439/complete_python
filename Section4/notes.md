@@ -61,9 +61,9 @@
 # Chaining Comparison Operators with Logical Operators 
 
 - We can use logical operators to combine comparison 
--- **and** 
--- **or**
--- **not**
+    - **and** 
+    - **or**
+    - **not**
 
 ```python
 1 < 2
@@ -132,3 +132,14 @@ False
 2 <= 3 >= 1
 
 True 
+
+# If, elif, else statements 
+
+- Let's begin to learn about **control flow**. Control flow allows us to use logic to execute code only when we want to. 
+- We often only want certain code to execute when a particular condition has been met. 
+- For example, **if** my dog is hungry (some condition) then I will feed the dog (some action).
+
+- To control htis flow of logic we use some keywords:
+    - **if**
+    - **elif** 
+    - **else**
