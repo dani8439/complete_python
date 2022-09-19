@@ -20,5 +20,20 @@ mylist
 mylist.insert # shift tab after the method call and it will tell you what it is. 
 # If not using jupyter notebook, can use the built in help function: help(mylist.insert) -- will return the doc string.
 
-# third option is to view the python documention.
+# third option is to view the python documention. https://docs.python.org/3/
+```
+
+# Introduction to Functions
+- Creating clean repeatable code is a key part of becomming an effective programmer
+- **Functions** allow us to create blocks of code that can be easily executed many times, without needing to constantly rewrite the entire block of code. 
+- Functions will be a huge leap forward in your capabilityes as a Python programmer. 
+- This also means the problems you will solve can be a lot harder! 
+- It is very important to get practice combining everything you've learned so far (control flow, loops, etc) with functions to become an effective programmer. 
+- This may be a point in your progress where you may get discouraged or frustrated. Don't worry. This is completely normal and very common!
+- We will guide you step by step, be patient with yourself and practice, practice, practice!!
+
+
+
+
+```python
 ```
