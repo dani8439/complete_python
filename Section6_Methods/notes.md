@@ -74,3 +74,74 @@ print(result)
 ```
 
 Most functions use return, rarely will a function just print. 
+
+# Basics of Python Functions
+
+```python
+def say_hello():
+    print("hello")
+
+say_hello()
+# hello
+
+def say_hello(name):    
+    print(f'Hello {name}')
+
+say_hello('Jose')
+# Hello Jose
+
+# default value to avoid getting an error if you accidentally call the function without an argument:
+def say_hello(name='Default'):
+    print(f'Hello {name}')
+
+sayHello()
+# Hello Default
+
+def add_num(num1,num2):
+    return num1+num2
+
+result = add_num(10,20)
+result
+# 30
+
+def print_result(a,b):
+    print(a+b)
+
+def return_result(a,b):
+    return a+b
+
+# Can't do this: result = print_result(10,20) will not return it or print anything out. Type of result is NoneType
+print_result(10, 20)
+# 30 -- no Output cell like with return 
+
+return_result(10,20)
+# 30 - Jupyter notebook shows an output cell for it. Out[40]
+result = return_result(10,20)
+result
+# 30
+
+# not common to do this
+def myfunc(a,b):
+    print(a+b)
+    return a+b
+
+result = myfunc(10,20)
+# 30
+
+result
+# 30
+
+def sum_numbers(num1, num2):
+    return num1+num2
+    # not checking that it's actually returning numbers. 
+
+sum_numers(10, 20)
+# 30
+sum_numers('10', '20')
+# '1020'
+
+# probably should make sure to verify the type of data before returning the result if use has to input things.
+
+```
+
+What's the main difference between print and return in a function? Return's result will allow you to save them as a variable. 
