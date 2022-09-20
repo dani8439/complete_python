@@ -240,7 +240,7 @@ for ticker,price in stock_prices:
 # GOOG
 # MSFT
 
-work_hours = [('Abby',100),('Billy',400),('Cassie',800)]
+work_hours = [('Abby',100),('Billy',4000),('Cassie',800)]
 
 def employee_check(work_hours):
 
@@ -277,4 +277,70 @@ item = employee_check(work_hours)
 # And then start exploring that variable:
 item
 ('Billy', 4000)
+```
+
+# Interactions between python functions 
+- Typically a python script or notebook contains several functions interacting with each other 
+- Let's create a few functions to mimic the carnival guessing game "Three Cup Monte."
+
+- Our simple game won't actually show the cups or ball, instead we will simply mimic the effect with a Python list.
+- Our simple version will also not show the shuffle to the user, so the guess is completely random.
+
+```python
+# How to shuffle a list at random in python. Python has a built in random module. 
+example = [1,2,3,4,5,6,7]
+from random import shuffle
+shuffle(example)
+example
+# [5, 2, 1, 3, 6, 7, 4]
+
+result = shuffle(example)
+result # All happens in place, so nothing is returned 
+
+# Our own version of shuffle that returns the example list 
+def shuffle_list(mylist):
+    shuffle(mylist)
+    return mylist
+
+result = shuffle_list(example)
+result 
+# [5, 6, 1, 7, 4, 2, 3]
+
+mylist = ['', 'O', ''] # O is the red ball and we will call...
+shuffle_list(mylist)
+# ['O', '', ''] and the O will shuffle around.
+
+def player_guess():
+    guess=''
+
+    # Can implement a while loop to see if the guess is correct
+    while guess not in ['0', '1', '2']:
+        # Can guess 1 of 3 positions
+        guess = input("Pick a number: 0, 1, or 2")
+
+    return int(guess)
+
+player_guess()
+# Pick a number: 0, 1 or 2, 1
+# 1 
+# can save the output 
+myindex = player_guess()
+# Pick a number: 0, 1, or 2
+
+# One more function to check if the guess is correct or not, and this is where the functions interact with one another
+def check_guess(mylist, guess):
+    if mylist[guess] == 'O':
+        print('Correct!')
+    else:
+        print("Wrong guess!")
+        print(mylist)
+
+# Initial list 
+mylist = ['', 'O', '']
+# Shuffle that list 
+mixexup_list = shuffle_list(mylist)
+# User guess 
+guess = player_guess()
+# Check guess
+check_guess(mixedup_list, guess)
 ```
