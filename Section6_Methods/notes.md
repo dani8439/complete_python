@@ -344,3 +344,108 @@ guess = player_guess()
 # Check guess
 check_guess(mixedup_list, guess)
 ```
+
+# Python Function Coding Exercises:
+
+```python
+# Functions 1
+# Write a function called myfunc that prints the string 'Hello World'.
+
+# For example:
+
+# def myfunc():
+#    print('Some text')
+
+def myfunc():
+   print('Hello World')
+
+# Functions 2: print Hello Name
+# Define a function called myfunc that takes in a name, and prints 'Hello Name' 
+
+# NOTE: Define the function, but do not run it!
+
+# Also, do not use f-strings, as they are not supported in this Coding Exercise.
+
+# For example:
+
+# def myfunc(name):
+#    print('My name is {}'.format(name))
+
+def myfunc(name):
+    print('Hello ' + name)
+
+# OR 
+
+def myfunc(name):
+    print('Hello {}'.format(name))
+
+# Functions #3 - simple Boolean
+# Define a function called myfunc that takes in a Boolean value (True or False). If True, return 'Hello', and if False,  return 'Goodbye'
+
+# Remember, don't run the function, simply provide the definition.
+
+# For example, a function that returns 'Inside' if a is True and 'Outside' if a is False could look like:
+
+# def myfunc(a):
+#     if a == True:
+#         return 'Inside'
+#     elif a == False:
+#         return 'Outside'
+# This is all you need to enter!
+
+# To give an idea what the above function would look like when tested:
+
+# myfunc(False)
+# Output: 'Outside'
+
+def myfunc(a):
+    if a == True:
+        return 'Hello'
+    elif a == False:
+        return 'Goodbye'
+
+# Functions #4 - using Booleans
+# Define a function called myfunc that takes three arguments, x, y and z.
+# If z is True, return x.  If z is False, return y.
+
+# Remember, don't run the function, simply provide the definition.
+
+# For example, a function that returns a if c is True and b if c is False might look like:
+
+# def myfunc(a,b,c):
+#     if c == True:
+#         return a
+#     else:
+#         return b
+# This is all you need to enter!
+
+# To give an idea what the function would look like when tested:
+
+# myfunc('Hello','Goodbye',False)
+# Output: 'Goodbye'
+
+def myfunc(x,y,z):
+    if z == True:
+        return x
+    elif z == False:
+        return y
+
+# Functions #5: simple math
+# Define a function called myfunc that takes in two arguments and returns their sum.
+
+# Remember, don't run the function, simply provide the definition.
+
+# For example, a function that takes in two arguments and returns their product might look like:
+
+# def myfunc(a,b):
+#     return a*b
+# This is all you need to enter!
+
+# To give an idea what the above function would look like when tested:
+
+# myfunc(5,12)
+# Output: 60
+
+def myfunc(a,b):
+    return a + b
+```
