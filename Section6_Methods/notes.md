@@ -145,3 +145,78 @@ sum_numers('10', '20')
 ```
 
 What's the main difference between print and return in a function? Return's result will allow you to save them as a variable. 
+
+# Logic with Python Functions
+
+Simple function that checks if something is even, and expand from there. Already know a bit of python logic
+
+```python
+# Mod Operator - shows the remainder after division
+2 % 2 
+# 0
+3 % 2
+# 1
+41 % 40
+# 1
+
+# If a number is even, that number mod 2, should be equal to 0. Then we knew it's even, if not, it's not even. 
+20 % 2 == 0
+# True 
+21 % 2 == 0
+# False
+
+# Lets construct this into a function. 
+def even_check(num):
+    result = num % 2 == 0
+    return result 
+
+even_check(20)
+# True 
+even_check(21)
+# False
+
+# For beginners it's easy to separate out onto two lines. Instead, we could just directly return it 
+def even_check(number):
+    return number % 2 == 0
+
+# RETURN TRUE IF ANY NUMBER IS EVEN INSIDE A LIST
+def check_even_list(num_list):
+    for number in num_list:
+        if number % 2 == 0:
+            return True 
+        else:
+            # pass keyword just means don't do anything
+            pass
+        # return False # WRONG!!!! Because means the if/else will only be able to check one number, doesn't go further if there's other even numbers after initially False as there's a return call on either condition. So the return false should be an indentation with the for loop after everything has been completed. So it should be here. A super common mistake beginners make is thinking that all return statements have to be indented on the same spot. They don't. 
+    return False
+
+check_even_list([1,3,5])
+# returns nothing
+check_even_list([2,4,5])
+# True 
+# edge cases 
+check_even_list([2,1,1,1])
+# True 
+check_even_list([1,1,1,2])
+# True
+
+# Let's expand the function even more in complexity and return all the even numbers in the list. 
+def check_even_list(num_list):
+    # return all the even numbers in a list
+
+    # placeholder variables
+    even_numbers = []
+
+    for number in num_list:
+        if number % 2 == 0:
+            even_numbers.append(number)
+        else:
+            pass
+
+     return even_numbers
+
+check_even_list([1,2,3,4,5])
+# [2, 4]
+check_even_list([1,3,5])
+# []
+```
