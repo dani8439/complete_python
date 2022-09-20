@@ -220,3 +220,61 @@ check_even_list([1,2,3,4,5])
 check_even_list([1,3,5])
 # []
 ```
+
+# Tuple unpacking with Python Functions
+
+```python
+# have seen before we can loop through a list of tuples and unpack them 
+
+stock_prices = [('APPL',200), ('GOOG',400), ('MSFT',100)]
+for item in stock_prices:
+    print(item)
+
+# ('APPL', 200)
+# ('GOOG', 400)
+# ('MSFT', 100)
+
+for ticker,price in stock_prices:
+    print(ticker)
+# APPL
+# GOOG
+# MSFT
+
+work_hours = [('Abby',100),('Billy',400),('Cassie',800)]
+
+def employee_check(work_hours):
+
+    current_max = 0
+    employee_of_month = ''
+
+    for employee,hours in work_hours:
+        # keep comparing through list of tuples, and switching when it's higher
+        if hours > current_max:
+            current_max = hours
+            employee_of_month = employee
+        else:
+            pass
+
+    # Return tuple 
+    return (employee_of_month, current_max)
+
+employee_check(work_hours)
+# ('Cassie', 800)
+
+# Can do two things, say: 
+result = employee_check(work_hours)
+# ('Cassie', 800)
+
+# OR just before with the for loop, can do:
+name,hours = employee_check(work_hours)
+name
+# 'Cassie'
+hours
+# 400
+
+# Can do tuple unpacking with this function call, but to avoid unpacking too many, say calling for 3 variables when there's only 2 in reality (which will throw an error), can assign the value to a variable:
+item = employee_check(work_hours)
+# And then start exploring that variable:
+item
+('Billy', 4000)
+```
