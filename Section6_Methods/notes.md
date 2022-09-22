@@ -499,3 +499,78 @@ def is_greater(x,y):
     elif x <= y:
         return False 
 ```
+
+# *args and **kwargs in Python
+
+Two functional parameters *args and **kwargs. (Star args, and double star kwargs). Stands for arguments and keyword arguments. Eventually working with python, you're going to want a way to accept an arbitrary number of arguments and keyword arguments w/o having to define in your function calls. 
+
+```python
+def myfunc(a,b):
+    # Returns 5% of the sum of a and ab
+    return sum((a,b)) * 0.05
+
+myfunc(40, 60)
+# 5.0
+
+# What if I had more numbers or parameters to pass in? A and B are examples of positional arguments. 40 is assigned to a as it was in the first position, first argument, and 60 is b as it was in the second position, second argument. But what if we wanted to work with more than two numbers? We could assign more parameters. Could do this:
+
+def myfunc(a,b,c=0,d=0,e=0):
+    return sum((a,b,c,d,e)) * 0.05
+
+# Problem is, we'll eventually hit a limit of how many parameters where we can pass in. So this is where we can use star args which alows us to take an arbitrary number of arguments:
+
+# allows us to treat this as a tuple of parameters coming in
+def myfunc(*args):
+    returm sum(args) * 0.05
+
+myfunc(40,60)
+# 5
+myfunc(40,60,100,1,34)
+# 11.75
+
+# If we print out what *args looks like as a function, it just looks like a tuple:
+myfunc(40,60,100,1,34)
+#(40, 60, 100, 1, 34)
+
+#*args is useful with the tuple because we can loop through it, iterate, etc. It doesn't have to be args. So long as the star is there, it can be any keyword you want. It's an arbitrary choice. By convention you should always use args. 
+
+def myfunc(*args):
+    for item in args:
+        print(item)
+
+myfunc(40,60,100,1,34)
+# 40
+# 60
+# 100
+# 1
+# 34
+
+# **kwargs instead of creating a tuple of values, builds a dictionary of key-value pairs 
+def myfunc(**kwargs):
+    print(kwargs)
+    if 'fruit' in kwargs:
+        print('My fruit of choice is {}'.format(kwargs['fruit']))
+    else:
+        print('I did not find any fruit here')
+
+myfunc(fruit='apple', veggie='lettuce')
+# kwargs returns a dictionary we can play around with inside of our function
+# {'fruit': 'apple', 'veggie': 'lettuce'}
+# My fruit of choice is apple
+
+# kwargs is also arbitrary. What indicates it should be a dictionary are the two stars. 
+
+# Can use *args and **kwargs in combination:
+def myfunc(*args, **kwargs):
+    print(args)
+    print(kwargs)
+    print('I would like {} {}'.format(args[0], kwargs['food']))
+
+# Because we said args first and then kwargs in the function, it has to go in that order. Has to be in the same order we prescribed otherwise would get an error.
+myfunc(10,20,30, fruit='orange', food='eggs', animal='dog')
+# (10, 20, 30)
+# {'fruit': 'orange', 'food': 'eggs', 'animal': 'dog'}
+# I would like 10 eggs
+
+# This is all very useful when we start using outside libraries. 
+```
