@@ -589,10 +589,30 @@ This is all you need to enter!
 To give an idea what the above function would look like when tested:
 
 myfunc(5,6,7,8)
-# Output: 4
+##  Output: 4
 Added note: this exercise requires that the function return the sum. Print statements will not work here.
 
 ```python
 def myfunc(*args):
     return sum(args)
+```
+
+# Functions #9: pick evens
+Define a function called myfunc that takes in an arbitrary number of arguments, and returns a list containing only those arguments that are even.
+
+Remember, don't run the function, simply provide the definition.
+
+To give an idea what the function would look like when tested:
+
+myfunc(5,6,7,8)
+## Output: [6, 8]
+Added note: this exercise requires that the function return a list. Print statements will not work here.
+
+```python
+def myfunc(*args):
+    lists = []
+    for item in args:
+        if item % 2 == 0:
+            lists.append(item)
+    return lists
 ```
