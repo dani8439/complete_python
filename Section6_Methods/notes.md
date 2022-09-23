@@ -650,11 +650,11 @@ def myfunc(str):
 ```python
 # Function Practice Exercises
 
-Problems are arranged in increasing difficulty:
-* Warmup - these can be solved using basic comparisons and methods
-* Level 1 - these may involve if/then conditional statements and simple methods
-* Level 2 - these may require iterating over sequences, usually with some kind of loop
-* Challenging - these will take some creativity to solve
+# Problems are arranged in increasing difficulty:
+# * Warmup - these can be solved using basic comparisons and methods
+# * Level 1 - these may involve if/then conditional statements and simple methods
+# * Level 2 - these may require iterating over sequences, usually with some kind of loop
+# * Challenging - these will take some creativity to solve
 
 ## WARMUP SECTION:
 
@@ -663,7 +663,18 @@ Problems are arranged in increasing difficulty:
     lesser_of_two_evens(2,5) --> 5
 
 def lesser_of_two_evens(a,b):
-    pass
+    if a % 2 == 0 and b % 2 == 0:
+        if a > b:
+            return b
+        else:
+            return a
+    else: 
+        if a < b:
+            return b
+        else:
+            return a 
+
+lesser_of_two_evens(2,5)
 
 # Check
 lesser_of_two_evens(2,4)
@@ -676,7 +687,12 @@ lesser_of_two_evens(2,5)
     animal_crackers('Crazy Kangaroo') --> False
 
 def animal_crackers(text):
-    pass
+    splits = text.split()
+
+    if splits[0][0] == splits[1][0]:
+        return True 
+    else:
+        return False
 
 # Check
 animal_crackers('Levelheaded Llama')
@@ -691,7 +707,15 @@ animal_crackers('Crazy Kangaroo')
     makes_twenty(2,3) --> False
 
 def makes_twenty(n1,n2):
-    pass
+    if n1 == 20 or n2 == 20:
+        return True
+    elif n1 + n2 == 20:
+        return True 
+    else:
+        return False
+
+makes_twenty(10,10)
+# True
 
 # Check
 makes_twenty(20,10)
@@ -705,31 +729,35 @@ makes_twenty(2,3)
      
     old_macdonald('macdonald') --> MacDonald
     
-Note: `'macdonald'.capitalize()` returns `'Macdonald'`
+# Note: `'macdonald'.capitalize()` returns `'Macdonald'`
 
 def old_macdonald(name):
-    pass
+    return name[0].capitalise() + name[1:3] + name[3].capitalize() + name[4:]
 
 # Check
 old_macdonald('macdonald')
+# 'MacDonald'
 
 #### MASTER YODA: Given a sentence, return a sentence with the words reversed
 
     master_yoda('I am home') --> 'home am I'
     master_yoda('We are ready') --> 'ready are We'
     
-Note: The .join() method may be useful here. The .join() method allows you to join together strings in a list with some connector string. For example, some uses of the .join() method:
+# Note: The .join() method may be useful here. The .join() method allows you to join together strings in a list with some connector string. For example, some uses of the .join() method:
 
-    >>> "--".join(['a','b','c'])
-    >>> 'a--b--c'
+#    >>> "--".join(['a','b','c'])
+#    >>> 'a--b--c'
 
-This means if you had a list of words you wanted to turn back into a sentence, you could just join them with a single space string:
+# This means if you had a list of words you wanted to turn back into a sentence, you could just join them with a single space string:
 
-    >>> " ".join(['Hello','world'])
-    >>> "Hello world"
+#    >>> " ".join(['Hello','world'])
+#    >>> "Hello world"
 
 def master_yoda(text):
-    pass
+    string = text.split()
+    string.reverse()
+    newstring = ' '.join(string)
+    return newstring
 
 # Check
 master_yoda('I am home')
