@@ -639,3 +639,9 @@ def myfunc(str):
             newStr.append(str[i].upper())
         return ''.join(newStr)
 ```
+
+# Function Practice Problems
+
+- Learning about functions increases your Python skills exponentially.
+- This also means that the difficulties of problems you can solve also increases drastically. 
+- Let's get some practice with converting problem statements into Python code. 
