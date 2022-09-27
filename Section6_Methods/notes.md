@@ -907,3 +907,65 @@ print_big('a')
 
 ## Great Job!
 ```
+# Function Practice Exercises: Solutions 
+
+```python
+# Warm up
+def lesser_of_two_evens(a,b):
+    if a%2 == 0 and b%2 == 0:
+        # BOTH NUMBERS ARE EVEN! 
+        if a < b: 
+            result = a 
+        else:
+            result = b
+    else: 
+        # ONE OR BOTH NUMBERS ARE ODD! 
+        if a > b:
+            result = a 
+        else:
+            result = b
+    return result 
+
+# Can clean up this code by using the min() function and max() function. 
+def lesser_of_two_evens(a,b):
+    if a%2 == 0 and b%2 == 0:
+        # BOTH NUMBERS ARE EVEN! 
+        # result = min(a,b)
+        return min(a,b)
+    else: 
+        # ONE OR BOTH NUMBERS ARE ODD! 
+       # result = max(a,b)
+       return max(a,b)
+    # return result
+
+# animal crackers
+def animal_crackers(text):
+    wordlist = text.split()
+
+    first = wordlist[0]
+    second = wordlist[1]
+
+    return first[0] == second[0]
+
+def animal_crackers(text):
+    wordlist = text.split()
+    # could check that the text is write case: wordlist = text.lower().split()
+
+    return wordllist[0[0] == wordlist[1][0]
+
+# Makes Twenty 
+
+def makes_twenty(n1,n2):
+    if n1 + n2 == 20:
+        return true 
+    elif n1 == 20:
+        return True 
+    elif n2 == 20:
+        return True 
+    else:
+        return False
+
+# Better way to write it 
+def makes_twenty(n1,n2):
+    return (n1+n2) == 20 or n1==20 or n2==20
+```
