@@ -1006,3 +1006,46 @@ def almost_there(n):
 
     return (abs(100-n) <= 10) or (abs(200-n) <= 10)
 ```
+
+# Functions Practice Solutions Level 2
+
+```python
+# Find 33
+
+def has_33(nums):
+    # want to go to the second to last digit, so we can check the last digit. If we went to the last digit there would be nothing to check
+    # goes through every single index position in the list, up to the second to last one. 
+    for i in range(0,len(nums)-1):
+        # then check if the last two numbers are 3 to make '33'
+        if nums[i] == 3 and nums[i+1] == 3:
+            return True 
+
+    return False
+
+# Alternative way to write the logic, doesn't look as nice:
+    if nums[i:i+2] == [3,3]
+
+# Paper Doll
+
+def paper_doll(text):
+    # trick is to start with an empty string and just keep concatenating to that string 
+
+    result = ''
+
+    for char in text:
+        result += char*3
+    return result
+
+# Blackjack
+
+def blackjack(a,b,c):
+
+    # sum is the sam as saying a+b+c
+    if sum([a,b,c]) <= 21:
+        return sum([a,b,c])
+    # if there's an 11 in there, and the sum put together is less than or equal to 31
+    elif 11 in [a,b,c] and sum([a,b,c]) <= 31:
+        return sum([a,b,c])-10
+    else:
+        return 'BUST'
+```
