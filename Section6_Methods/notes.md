@@ -1070,3 +1070,60 @@ def summer_69(arr):
                 break 
     return total
 ```
+
+# Function Exercises Challenging Problems Solutions 
+
+```python
+# Spy Game
+# 007 doesn't have to be consecutive
+def spy_game(nums):
+    code = [0,0,7,'x']
+    # [0, 7, 'x']
+    # [7, 'x']
+    # ['x'] length=1
+
+    # iterate through and see if hey, number is equal to first num in this code list. Then pop it off at the first index, so next iteration is looking for next 0, then 7. And so on until we have 007. and ['x'] length=1
+    for num in nums:
+        if num == code[0]:
+            code.pop(0)
+    return len(code) == 1
+
+# Count Primes: Write a function that returns the number of prime numbers that exist up to and including a given number 
+# By convenction we'll treat 0 and 1 as not prime
+def count_primes(num):
+
+    # check for 0 or 1 input
+    if num < 2:
+        return 0
+    ###########################
+    # 2 or greater if not returned before this
+    ##########################
+
+    # Store our prime numbers
+    primes = [2]
+    # Counter going up to the input num
+    x = 3
+
+    # x is going through every number up to input num
+    while x <= num:
+        # step size of 2 because even number beyond 2 are not primes. 
+        # Check if x is prime
+        for y in range(3,x,2):
+            if x%y == 0:
+                # not a prime number 
+                x += 2
+                break
+        # If we can successfully go throug the for loop and not break out of it, then we have a prime number somewhere 
+        else: # if we went through the entire for loop and it didn't break, then we'll execute below. For/else is a challenge can only do it because of the break statement. 
+            primes.append(x)
+            x += 2
+    print(primes)
+    return len(primes)
+# clever trick, don't have to check every number up to x. could say for y in primes: 
+
+def print_big(letter):
+    patterns = {1:'  *  ',2:' * * ',3:'*   *',4:'*****',5:'**** ',6:'   * ',7:' *   ',8:'*   * ',9:'*    '}
+    alphabet = {'A':[1,2,4,3,3],'B':[5,3,5,3,5],'C':[4,9,9,9,4],'D':[5,3,3,3,5],'E':[4,9,4,9,4]}
+    for pattern in alphabet[letter.upper()]:
+        print(patterns[pattern])
+```
