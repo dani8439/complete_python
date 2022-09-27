@@ -969,3 +969,40 @@ def makes_twenty(n1,n2):
 def makes_twenty(n1,n2):
     return (n1+n2) == 20 or n1==20 or n2==20
 ```
+
+# Functions Practice Problems Solutions Level 1
+
+```python
+def old_macdonald(name):
+    first_letter = name[0]
+    inbetween = name[1:3]
+    fourth_letter = name[3]
+    rest = name[4:]
+
+    return first_letter.upper() + inbetween + fourth_letter.upper() + rest
+
+def old_macdonald(name):
+    first_half = name[:3]
+    second_half = name[3:]
+
+    return first_half.capitalize() + second_half.capitalise()
+
+# Master Yoda 
+
+def master_yoda(text):
+    wordlist = text.split()
+    reversed_wordlist = wordlist[::-1]
+    return ' '.join(reversed_word_list)
+
+# Using join to get the wordlist back together. 
+mylist = ['a', 'b', 'c'c]
+'--'.join(mylist)
+#'a--b--c' will concatenate and fill in between every piece of the list. 
+# '' blank string or ' ' to get abc or a b c
+
+# Almost There 
+def almost_there(n):
+    # want to check if 100 - n the abosolute value of that is <= 10 
+
+    return (abs(100-n) <= 10) or (abs(200-n) <= 10)
+```
