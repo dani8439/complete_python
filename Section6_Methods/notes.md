@@ -1048,4 +1048,25 @@ def blackjack(a,b,c):
         return sum([a,b,c])-10
     else:
         return 'BUST'
+
+# Summer of '69 
+def summer_69(arr):
+
+    total = 0
+    add = True 
+
+    for num in arr:
+        while add:
+            if num!= 6:
+                total += num
+                break 
+            else:
+                add = False 
+        while not add: # while add != True
+            if num != 9:
+                break
+            else:
+                add = True
+                break 
+    return total
 ```
