@@ -1127,3 +1127,101 @@ def print_big(letter):
     for pattern in alphabet[letter.upper()]:
         print(patterns[pattern])
 ```
+# Lambda Expressions Map and Filter 
+Way to quickly create anonymous functions, a function that's used once and then never again. Don't name them, never really reference them again. 
+
+```python
+def square(num):
+    return num**2
+
+my_nums = [1,2,3,4,5]
+
+# Want to apply square to all numbers in my list. Can do a for loop, easier to do it using map. 
+for item in map(square, my_nums):
+    print(item)
+# Have to iterate through, otherwise just get a memory space. 
+# 1
+# 4
+# 9
+# 16
+# 25
+
+list(map(square, my_nums))
+[1, 4, 9, 16, 25]
+
+def splicer(mystring):
+    if len(mystring) % 2 == 0: 
+        return 'EVEN'
+    else:
+        return mystring[0]
+
+names = ['Andy', 'Eve', 'Sally']
+list(map(splicer, names))
+['EVEN', 'E', 'S']
+
+# When using the map function, passing in square or splicer, not calling them to execute within the map. Map itself executes them. Do not add in the parentheses to call them. Just pass the function itself as an argument. 
+
+# Filter function - filter by a function that returns either true or false. 
+def check_even(num):
+    return num % 2 == 0 
+
+mynums = [1,2,3,4,5,6]
+
+list(filter(check_even, mynums))
+# [2, 4, 6]
+
+# or can iterate through it:
+for n in filter(check_even, mynums):
+    print(n)
+# 2
+# 4
+# 6
+
+# Lambda expressions and see why they are useful: 
+
+def square(num):
+    result = num ** 2 
+    return result
+
+square(3)
+# 9
+
+# Slowly step by step, turn square into a lambda expression
+def square(num):
+    return num ** 2 
+
+# if we run, it's the exact same thing. 
+# Can also write this all on one line:
+def square(num): return num ** 2
+
+# almost in the form of a lambda expression. A lambda is also known as an anonymous function. Some functionality you only intend to use one time. 
+
+# replace def keyword with lambda, and remove the return (it's implied)
+square = lambda num: num ** 2
+square(5)
+# 25
+
+# Typically don't name them. Instead going to use it in conjunction with other functions such as map and filter. 
+
+# Here's where they shine:
+
+list(map(lambda num:num**2, mynums))
+# [1, 4, 9, 16, 25, 36]
+
+def check_even(num): 
+    return num%2 == 0
+
+list(filter(lambda num: num%2 == 0, mynums))
+# [2, 4, 6]
+
+# Lambda expressions can be used for a variety of things. Say we want the first character of the strings. 
+
+list(map(lambda name:name[0], names))
+# ['A', 'E', 'S']
+
+# say we wanted to reverse the names
+list(map(lambda x:x[::-1], names))
+# ['ydnA', 'evE', 'yllaS']
+
+# can even pass in multiple arguments to a lambda expression. But not every single complex function will directly translate to a lambda. Should only use lambda's when you can read it clearly. 
+```
