@@ -1472,7 +1472,11 @@ palindrome('helleh')
 import string
 
 def ispangram(str1, alphabet=string.ascii_lowercase):
-    pass
+    for char in alphabet:
+        if char not in str1.lower():
+            return False 
+    return True
+
 ispangram("The quick brown fox jumps over the lazy dog")
 # True
 string.ascii_lowercase
