@@ -1225,3 +1225,135 @@ list(map(lambda x:x[::-1], names))
 
 # can even pass in multiple arguments to a lambda expression. But not every single complex function will directly translate to a lambda. Should only use lambda's when you can read it clearly. 
 ```
+# Nested Statements and Scope 
+
+When you create a variable name in python, it's stored in the namespace. Variable names also have a scope, and that scope determines visibility. 
+
+```python
+x = 25 
+def printer():
+    x = 50
+    return x 
+
+printer(x)
+# 25
+
+print(printer())
+# 50 
+
+# How does python which x assignment we're referring to in our code? Why doesn't the reassignment affect later on when we ask to print(x). The rules are LEGB rule format. LEGB stands for Local Enclosing Function Locals Global Built in
+```
+**LEGB RULE**: 
+- **L: Local** - Names assigned in any way within a function (def or lamda), and not declared global in that function
+- **E: Enclosing function locals** - Names in the local scope of any and all enclosing functions (def or lambda), from inner to outer.
+- **G: Global (module)** - Names assigned at the top-level of a module file, or declared global in a def within the file. 
+- **B: Built-in (Python)** - Names preassigned in the built-in names module: open, range, SyntaxError,...
+
+```python
+# Local
+lambda num:num**2 
+# num is local to the lambda expression 
+
+# Enclosing function locals 
+name = 'THIS IS A GLOBAL STRING'
+
+def greet():
+    # sets variable name equal to Sammy
+    name = 'Sammy'
+    # inside of the greet function we have another function
+    def hello():
+        print('Hello ' + name)
+    # call and execute hellow
+    hello()
+
+greet()
+# Hello Sammy
+
+# When I execute greet() I'm calling and executing the greet function, it assigns name to Sammy, defined function hello, and then executes the function hello. Look in local namespace, within a function. If it can't find it, it goes to enclosing function locals (function within a function) and there, name is defined as Sammy.
+
+# If we comment out Sammy within greet() and run the function again, we get back HELLO THIS IS A GLOBAL STRING. Again, first looked at locally, it's not there, then it's not in the enclosing function, so we then look globally and it's there at the global level. 
+
+# GLOBAL
+name = 'THIS IS A GLOBAL STRING'
+
+def greet():
+    # ENCLOSING
+    name = 'Sammy'
+ 
+    def hello():
+        # LOCAL
+        name = 'IM A LOCAL'
+        print('Hello ' + name)
+
+    hello()
+
+greet()
+# Hello IM A LOCAL
+
+# Only level above global is the built in function level, which would be something like:
+len #length
+#<function len>
+# Be careful not to overwrite the built in function names. 
+
+x = 50 
+
+def func(x):
+    print(f'X is {x}')
+
+func(x)
+# X is 50 
+
+# Reassigning X locally. 
+x = 50 
+
+def func(x):
+    print(f'X is {x}')
+
+    # LOCAL REASSIGNMENT! 
+    x = 200 
+    print(f'I JUST LOCALLY CHANGED X TO {x}')
+
+func(x)
+# X is 50 
+# I JUST LOCALLY CHANGED X TO 200
+
+print(x)
+# 50 - get this back even though we reassigned x to be 200. It's happening because the reassignment is only happening in the local namespace inside the function. Doesn't effect anything at a higher scope. 
+
+# Let's imagine you're in a situation where you did want to grab the global x and reassign to 200. How would we do that? Not grab x as a parameter for starters 
+
+x = 50 
+
+def func():
+    # declare a global x, tells Python I want you to go to the namespace, jump to the global level, and grab the value there. It will affect the global x. 
+    global x 
+    print(f'X is {x}')
+
+    # LOCAL REASSIGNMENT ON A GLOBAL VARIABLE
+    x = 'NEW VALUE' 
+    print(f'I JUST LOCALLY CHANGED GLOBAL X TO {x}')
+
+print(x)
+# 50 
+
+func()
+# X is 50
+# I JUST LOCALLY CHANGED GLOBAL X TO NEW VALUE
+
+# Should avoid using the  global keyword unless absolutely necessary. Should instead take it in as a parameter, do the reassignment, and then return the reassignment as the value itself:
+
+def func(x):
+
+    print(f'X is {x}')
+
+    x = 'NEW VALUE' 
+    print(f'I JUST LOCALLY CHANGED GLOBAL X TO {x}')
+    return x
+
+x = func(x)
+# X is 50 
+# I JUST LOCALLY CHANGED GLOBAL X TO NEW VALUE
+
+x
+# New Value
+```
