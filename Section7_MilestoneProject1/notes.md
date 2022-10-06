@@ -57,3 +57,52 @@ display(row1,row2,row3)
 # [' ', 'X', ' ']
 # [' ', ' ', ' ']
 ```
+
+# Accepting User Input
+
+```python
+input("Please enter a value: ")
+# input box will pop up. 2
+# '2'
+result = input("Please enter a value: ")
+result 
+# '2' 
+# returns a string. 
+type(result)
+# str
+# If we wanted it to be something else, floating point, integer, have to convert it. Convert it using built in casting functions:
+result = input("Enter Value: ")
+# Enter Value: 2 
+result_int = int(result)
+type(result)
+# str
+tupe(result_int)
+# int
+
+type(2.3)
+# float
+
+flat('3.14')
+# 3.14
+
+position_index = input("Choose an index position: ")
+row1[position_index]
+# can't do that, get an error. 
+
+row1['1'] # this is the error
+row1[1]
+# ' ' 
+
+# Instead can do it all on one line:
+position_index = int(input("Choose an index position: "))
+type(position_index)
+# int
+row2[position_index]
+# ' '
+
+# Has to be a legitimate input. Can't type two and get 2. Python isn't smart enough to convert that. 
+
+# Have to actually input. No other cells will run if you don't. 
+result = input("Enter a number: ")
+# If you accidentally run the cells twice, maybe accidentally click on cell twice, then we're in trouble. Accidentally tried to override input cell, but initial input is still waiting for its interaction/value. Now we're screwed. Still stuck on waiting on original input. Only way to fix this is to restart your kernel. Common mistake for beginners. Can also run all cells in jupyter notebook to avoid having to run everything again, as nothing will work once you restart.
+```
