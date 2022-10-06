@@ -17,3 +17,43 @@ Then need a user input. Then that user input would go into some sort of function
 
 - In the next series of short lectures, we will guide you through examples of how to perform these tasks with Python.
 - Keep in mind, there are many different ways of performing the same task, so don't feel restricted by the examples we show here.
+
+# Displaying Information 
+
+```python
+print([1,2,3])
+
+# Print multiple lines
+print([1,2,3])
+print([4,5,6])
+print([7,8,9])
+
+# Could put within own custom function:
+
+def display(row1,row2,row2):
+    print(row1)
+    print(row2)
+    print(row3)
+
+example_row = [1,2,3]
+display(example_row, example_row, example_row)
+# [1, 2, 3]
+# [1, 2, 3]
+# [1, 2, 3]
+
+# Technically the example row doesn't have to be a list. It can be anything:
+row1 = [' ', ' ', ' ']
+row2 = [' ', ' ', ' ']
+row3 = [' ', ' ', ' ']
+
+display(row1,row2,row3)
+# [' ', ' ', ' ']
+# [' ', ' ', ' ']
+# [' ', ' ', ' ']
+
+row2[1] = 'X'
+display(row1,row2,row3)
+# [' ', ' ', ' ']
+# [' ', 'X', ' ']
+# [' ', ' ', ' ']
+```
