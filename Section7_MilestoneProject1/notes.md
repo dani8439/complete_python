@@ -14,3 +14,6 @@ Then need a user input. Then that user input would go into some sort of function
     * Let the user update through an interaction
     * Update variables in the program
     * Display updated visual
+
+- In the next series of short lectures, we will guide you through examples of how to perform these tasks with Python.
+- Keep in mind, there are many different ways of performing the same task, so don't feel restricted by the examples we show here.
