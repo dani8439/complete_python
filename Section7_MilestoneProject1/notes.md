@@ -106,3 +106,14 @@ row2[position_index]
 result = input("Enter a number: ")
 # If you accidentally run the cells twice, maybe accidentally click on cell twice, then we're in trouble. Accidentally tried to override input cell, but initial input is still waiting for its interaction/value. Now we're screwed. Still stuck on waiting on original input. Only way to fix this is to restart your kernel. Common mistake for beginners. Can also run all cells in jupyter notebook to avoid having to run everything again, as nothing will work once you restart.
 ```
+
+# Validating User Input
+
+- We've seen how to use input() to interact with a user and how to convert the string data type into another type, such as an integer. 
+- Let's now explore how to further validate user input to avoid errors for invalid conversions 
+
+```python
+def user_choice():
+    choice = input("Please enter a number (0-10): ")
+    return int(choice)
+```
